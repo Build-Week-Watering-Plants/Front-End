@@ -8,11 +8,24 @@ export default function PlantList(props) {
     //destructured props ...uncomment when PlantForm is built out (remove props if no functions are built out)
     const{
         values,
-        //submit,
-        //change,
+        submit,
+        change,
         //errors,
         //disabled
     } =props
+
+    const onSubmit = evt => {
+        evt.preventDefault()
+        submit()
+    }
+
+    const onChange = evt => {
+        const { name, value, checked, type } = evt.target
+        const valueToUse = type === 'checkbox' ? checked : value;
+        change(name, valueToUse)
+    }
+
+
 
 return (
     <div>
@@ -88,7 +101,7 @@ return (
 
    
 
-    <button type='submit' id="order-button">Order Pizza</button>
+    <button type='submit' id="submit-button">Submit New Plant</button>
 </form>
 </div>
 )
