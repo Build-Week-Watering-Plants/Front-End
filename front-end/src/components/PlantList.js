@@ -34,7 +34,7 @@ return (
 
     <form className= 'form container' id='plant-form' onSubmit={onSubmit}>
         <div className='form-group submit'>
-        <h1>Make a new plant</h1>
+        <h1>Make a New Plant</h1>
 
     
         {/*
@@ -49,7 +49,7 @@ return (
         </div> 
 
     <div className='form-group inputs'>
-        <label>Enter a nickname for your plant.
+        <label>Enter a nickname for your plant:
             <input id='nickname-input'
                 value={values.nickname}
                 onChange={onChange}
@@ -60,7 +60,7 @@ return (
         </div>
 
         <div className='form-group inputs'>
-        <label>Upload a file for your plant.
+        <label>Upload a file for your plant:
             <input id='plant-image'
                 value={values.image}
                 onChange={onChange}
@@ -89,14 +89,14 @@ return (
             value={values.waterFrequency}
             name='waterFrequency'
             >
-            <option value=''>- Select the watering frequency -</option>
+            <option value=''>- Select the Watering Frequency -</option>
             <option value='daily'>Once a Day</option>
             <option value='weekly'>Once a Week</option>
             <option value='monthly'>Once a Month</option>
           </select>
         </label>
     </div>
-
+    
     
 
    
