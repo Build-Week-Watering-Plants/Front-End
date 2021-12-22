@@ -3,10 +3,17 @@ import './App.css';
 import {Route, Switch, Routes, useParams } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import axios from 'axios';
-
+import styled from 'styled-components'
 import Home from './components/Home';
 import Plant from './components/Plant';
 import PlantList from './components/PlantList';
+import SignupPage from './components/SignupPage';
+import PrivateRoute from './components/PrivateRoute';
+import UserProfile from './components/UserProfile';
+
+
+const StyleHeader = styled.header`
+background-color: #e8dfe3;`
 
 const initialFormValues = {
   nickname: '',
@@ -51,12 +58,12 @@ export default function App() {
 
   
   return (
-  
+    <StyleHeader>
       <div className="App">
        
        <header>
           <Navigation/>
-          Water My Plants
+          
         </header>
 
       
@@ -75,10 +82,12 @@ export default function App() {
                         //errors={formErrors}
                         />
         </Route>
+        <Route exact path="/signup" component={SignupPage} />
+        <PrivateRoute exact path="/userprofile" component={UserProfile} />
         </Switch>
         
       </div>
-   
+      </StyleHeader>
   );
 }
 
