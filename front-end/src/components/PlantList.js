@@ -53,7 +53,7 @@ return (
             <input id='nickname-input'
                 value={values.nickname}
                 onChange={onChange}
-                nickname='nickname'
+                name='nickname'
                 type='text'
             />
         </label>
@@ -64,7 +64,7 @@ return (
             <input id='plant-image'
                 value={values.image}
                 onChange={onChange}
-                nickname='image'
+                name='image'
                 type='file'
             />
         </label>
