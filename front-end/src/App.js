@@ -1,6 +1,6 @@
-import React, {useState, useEffect}  from 'react';
+import React, {useState, useEffect }  from 'react';
 import './App.css';
-import {Route, Switch, Routes } from 'react-router-dom';
+import {Route, Switch, Routes, useParams } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import axios from 'axios';
 import styled from 'styled-components'
@@ -26,21 +26,19 @@ const initialFormValues = {
 export default function App() {
   const [plant, setPlant] = useState([])
   const [formValues, setFormValues] = useState(initialFormValues)
+  const { user_id } = useParams;
   
   const postPlantList = newPlant => {
 
-
-    axios.post('https://water-my-plants-build-week-123.herokuapp.com/api/plants/additem/:user_id', newPlant)
+    axios.post(`https://water-my-plants-build-week-123.herokuapp.com/api/plants/additem/${user_id}`, newPlant) // find out what user_id is
     .then(resp => {
       setPlant(resp.data)
       console.log(plant)
     }).catch(err => console.error(err))
     .finally(() => setFormValues(initialFormValues))
-
   }
 
   const inputChange = (name, value) => {
-    
     setFormValues({
       ...formValues,
       [name]: value
