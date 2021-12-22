@@ -7,6 +7,7 @@ import axios from 'axios';
 import Home from './components/Home';
 import Plant from './components/Plant';
 import PlantList from './components/PlantList';
+import Login from './components/Login';
 
 const initialFormValues = {
   nickname: '',

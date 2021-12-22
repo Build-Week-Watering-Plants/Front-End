@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #cebdb3;
+  /* background-image: url("https://images.pexels.com/photos/2266845/pexels-photo-2266845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
 }
 
 code {
@@ -15,7 +17,10 @@ code {
 nav {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1%;
+  margin: 1% 20%;
+  border: 2px solid black;
+  padding: 0.5%;
+  border-radius: 12px;
 }
 
 nav a {
@@ -27,6 +32,31 @@ nav a:hover {
   font-weight: bold;
 }
 
+header {
+  color: #485a36;
+  font-weight: bold;
+}
+
+/* HOMEPAGE STYLING */
+.home-container {
+  max-width: 68%;
+  margin: auto;
+}
+
+.home-container img {
+  width: 825px;
+  height: 407px;
+  border: 2px solid black;
+  border-radius: 3px;
+  opacity: 0.85;
+}
+
+.home-container h2 {
+  color: #485a36;
+  font-style: italic;
+}
+
+/* PLANTLIST STYLING */
 #plant-form {
   background-image: url("https://images.pexels.com/photos/4503823/pexels-photo-4503823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: no-repeat;
@@ -90,3 +120,4 @@ button:hover {
   opacity: 0.95;
   border: 2px solid rgb(61, 61, 61);
 }
+
