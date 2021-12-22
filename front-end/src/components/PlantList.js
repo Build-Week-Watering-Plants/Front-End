@@ -6,13 +6,13 @@ import { NavLink } from 'react-router-dom'
 
 export default function PlantList(props) {
     //destructured props ...uncomment when PlantForm is built out (remove props if no functions are built out)
-    const{
+    const {
         values,
         submit,
         change,
         //errors,
         //disabled
-    } =props
+    } = props;
 
     const onSubmit = evt => {
         evt.preventDefault()
@@ -29,7 +29,7 @@ export default function PlantList(props) {
 
 return (
     <div>
-    <NavLink to ='/Home'> <button>Home</button></NavLink >
+    <NavLink to ='/'> <button>Home</button></NavLink >
    
 
     <form className= 'form container' id='plant-form' onSubmit={onSubmit}>
