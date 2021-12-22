@@ -10,7 +10,7 @@ import PlantList from './components/PlantList';
 import SignupPage from './components/SignupPage';
 import PrivateRoute from './components/PrivateRoute';
 import UserProfile from './components/UserProfile';
-
+import Login from './components/Login';
 
 const StyleHeader = styled.header`
 background-color: #e8dfe3;`
@@ -84,6 +84,7 @@ export default function App() {
         </Route>
         <Route exact path="/signup" component={SignupPage} />
         <PrivateRoute exact path="/userprofile" component={UserProfile} />
+        <Route exact path="/login" component={Login} />
         </Switch>
         
       </div>

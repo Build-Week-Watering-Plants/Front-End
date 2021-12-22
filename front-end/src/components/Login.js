@@ -1,42 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { axiosWithAuth} from './axiosWithAuth';
+
 
 const Login = (props) => {
-    
-}
 
-const submitLogin = () => {
+    const [login, setLogin] = useState({
+        username: '',
+        password: ""
+    });
 
-}
+    const changeHandler = e => {
+        setLogin({ ...login,[e.target.name]: e.target.value  });
+    };
 
-return (
-    <div className="inner-container">
-        <div className="header">
-            Login
-        </div>
-        <div className="box">
-            <div className="input-group">
-                <label htmlFor="username">Username</label>
+    const theLogin = e => {
+        e.preventDefault();
+        axiosWithAuth()
+        .post("https://water-my-plants-build-week-123.herokuapp.com/api/auth/login", login)
+        // .then(res => console.log(res))
+        .then(res => {
+            localStorage.setItem("token", res.data.payload);
+            props.history.push("/profile");
+        })
+        .catch(err => console.log(err, "error login"))
+    };
+
+    return (
+        <div>
+            <form onSubmit={theLogin} >
                 <input
-                   type="text"
-                   name="username"
-                   className="login-input"
-                   placeholder="Username"/>
-            </div>
-
-            <div className="input-group">
-                <label htmlFor="password">Password</label>
+                    type="text"
+                    name="username"
+                    value={login.username}
+                    onChange={changeHandler}
+                    placeholder="Username"
+                />
                 <input
-                   type="password"
-                   name="password"
-                   className="login-input"
-                   placeholder="Password"/>
-            </div>
-
-            <button
-                type="button"
-                className="login-btn"
-                onClick={submitLogin}>Login</button>
+                    type="password"
+                    name="password"
+                    value={login.password}
+                    onChange={changeHandler}
+                    placeholder="Password"
+                />
+                <button>Log In</button>
+            </form>
         </div>
-    </div>
-)
+    )
+};
+
 export default Login;
