@@ -21,3 +21,12 @@ With an easy to use interface for creating a plant watering schedule tailored to
 
 
 Vercel Deployed Link:front-end-six-theta.vercel.app
+# *Meet the Team*
+Anthony Amaya- Backend Engineer
+Kiran Letherwala- Frontend React Engineer
+Sageman Qua- Fontend React Engineer
+Kevin Lee- Frontend React Engineer
+Leila Ayad-Frontend React Engineer
+Lindsay Kelly- Frontend React Engineer
+Fatimah Sarwar- Frontend React Engineer
+Derek Oh- Frontend React Engineer
