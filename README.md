@@ -19,6 +19,8 @@ With an easy to use interface for creating a plant watering schedule tailored to
 5. Authenticated `user` can update their `phoneNumber` and `password`.
 6. Authenticated `user` can update their `phoneNumber` and `password`.
 
+## API endpoints
+https://awake-badger-f9c.notion.site/5cee75df9ca24719aa0c606248487756?v=2d4e5978fd2b436e9af31583f3351cee
 
 Vercel Deployed Link:front-end-six-theta.vercel.app
 # *Meet the Team*
