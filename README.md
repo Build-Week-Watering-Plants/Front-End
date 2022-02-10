@@ -26,7 +26,7 @@ Vercel Deployed Link:front-end-six-theta.vercel.app
 # *Meet the Team*
 Anthony Amaya- Backend Engineer
 Kiran Letherwala- Frontend React Engineer
-Sageman Qua- Fontend React Engineer
+DeQuavion Wilburn - Fontend React Engineer
 Kevin Lee- Frontend React Engineer
 Leila Ayad-Frontend React Engineer
 Lindsay Kelly- Frontend React Engineer
